@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: arabic;
+}
+
+@font-face {
+    font-family: arabic;
+    src: url(../fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: arabicSemi;
+    src: url(../fonts/Rubik-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: arabicBold;
+    src: url(../fonts/Rubik-Bold.ttf);
+}
+
+:root {
+    --max-width: 1280px;
+    --background: #212121;
+    --color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--background);
+    color: var(--color);
+}
+
+.container {
+    border: 1px solid red;
+    min-height: calc(100vh - 100px - 400px);
+    width: var(--max-width);
+    margin: 0 auto;
+}
