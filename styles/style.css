@@ -1,0 +1,234 @@
+.sec1 .content {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.sec1 .content .card {
+    height: 360px;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.5s ease scale;
+}
+.sec1 .content .card:hover {
+    scale: 1.02;
+}
+.sec1 .content .card .image {
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+.sec1 .content .card .image::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    height: 302px;
+    width: 302px;
+    background: #777777;
+    border-radius: 26px;
+    clip-path: path(
+        "M30 0 H270 Q300 0 300 30 V270 Q300 300 270 300 H90 Q60 300 60 270 V270 Q60 240 30 240 H30 Q0 240 0 210 V30 Q0 0 30 0 Z"
+    );
+    transform: scale(1.015);
+    transform-origin: center;
+}
+.sec1 .content .card .image img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    z-index: 0;
+    clip-path: path(
+        "M30 0 H270 Q300 0 300 30 V270 Q300 300 270 300 H90 Q60 300 60 270 V270 Q60 240 30 240 H30 Q0 240 0 210 V30 Q0 0 30 0 Z"
+    );
+}
+.sec1 .content .card .image a {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    border: 2px solid #777777;
+    color: var(--color);
+    height: 53px;
+    width: 53px;
+    display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 22px;
+    padding: 0 0 0 0;
+    font-size: 30px;
+    font-weight: bolder;
+    z-index: 1;
+    transition:
+        0.5s ease background,
+        0.5s ease color,
+        0.5s ease border;
+}
+.sec1 .content .card:hover .image a {
+    color: var(--background);
+    background: var(--color);
+    border: 2px solid var(--color);
+}
+.sec1 .content .card .text {
+    padding: 10px 20px 20px 10px;
+    font-size: 18px;
+}
+/* section one */
+
+section.sec2 {
+    min-height: unset;
+}
+.sec2 .content {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+.sec2 .content p {
+    font-size: 20px;
+    width: 80%;
+    line-height: 140%;
+}
+.sec2 .content span {
+    font-family: "logo";
+    font-size: 40px;
+    padding: 20px;
+}
+/* section two */
+
+.sec3 .content {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.sec3 .content .card {
+    min-height: 500px;
+    width: 410px;
+    cursor: pointer;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 40px;
+}
+.sec3 .content .card h3 {
+    font-size: 40px;
+}
+.sec3 .content .card a {
+    color: var(--color);
+    height: 53px;
+    width: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    font-size: 30px;
+    background: var(--color);
+    color: var(--background);
+}
+.sec3 .content .card:nth-child(1) {
+    background: url("../assets/images/CategoryCollection1.webp") center/cover;
+}
+.sec3 .content .card:nth-child(3) {
+    background: url("../assets/images/CategoryCollection2.webp") center/cover;
+}
+.sec3 .content .card:nth-child(4) {
+    background: url("../assets/images/CategoryCollection3.webp") center/cover;
+}
+.sec3 .content .card:nth-child(5) {
+    background: url("../assets/images/CategoryCollection4.webp") center/cover;
+}
+.sec3 .content .card:nth-child(6) {
+    background: url("../assets/images/CategoryCollection5.webp") center/cover;
+}
+/* section three */
+
+section.sec4 {
+    min-height: unset;
+}
+.sec4 .content {
+    min-height: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+.sec4 .content .card {
+    margin: 10px;
+    min-height: 250px;
+    padding: 20px 50px 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid #777777;
+}
+.sec4 .content .card img {
+    background: #777777;
+    padding: 5px;
+    height: auto;
+    width: 50px;
+    border-radius: 5px;
+}
+.sec4 .content .card h3 {
+    padding: 10px 0;
+    line-height: 140%;
+}
+/* section four */
+
+/* media queries */
+
+@media screen and (max-width: 1320px) {
+    .sec3 .content .card h3 {
+        font-size: 35px;
+    }
+    .sec3 .content .card {
+        min-height: 430px;
+        width: 380px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .sec3 .content .card h3 {
+        font-size: 35px;
+    }
+    .sec3 .content .card {
+        min-height: 330px;
+        width: 280px;
+    }
+
+    .sec4 .content .card img {
+        width: 38px;
+    }
+
+    .sec4 .content .card h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .sec2 .content p {
+        font-size: 20px;
+        width: 100%;
+        line-height: 140%;
+    }
+
+    .sec3 .content .card {
+        min-height: 310px;
+        width: 258px;
+    }
+
+    .sec4 .content {
+        min-height: 230px;
+    }
+    .sec4 .content .card {
+        min-height: 214px;
+        padding: 20px 30px 20px 0;
+    }
+}
+@media screen and (max-width: 770px) {
+    .sec3 .content .card {
+        min-height: 310px;
+        width: 230px;
+    }
+}

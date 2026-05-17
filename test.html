@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* .this {
+            height: 300px;
+            width: 500px;
+            background: red;
+            clip-path: path(
+                "M 20,0 L 480,0 A 30,30,0,0,1 500,20 L 500,200  A 30,30,0,0,1 480,220 L 350,220  A 30,30,0,0,0 330, 240 L 330,280 A 30,30,0,0,1 310,300 L 20,300 A 30,30,0,0,1 0,280 L 0,20  A 30,30,0,0,1 20,0 Z"
+            );
+        } */
+        .this {
+            height: 300px;
+            width: 300px;
+            background: red;
+            clip-path: path(
+                "M40 0 H260  Q300 0 300 40  V200  Q300 240 260 240  H200  Q160 240 160 280  Q160 300 140 300  H40  Q0 300 0 260  V40  Q0 0 40 0  Z"
+            );
+        }
+    </style>
+    <body>
+        <div class="this"></div>
+    </body>
+</html>
